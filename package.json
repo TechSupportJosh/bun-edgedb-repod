@@ -1,0 +1,22 @@
+{
+  "name": "bun-edgedb-test",
+  "module": "index.ts",
+  "type": "module",
+  
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@edgedb/generate": "^0.3.4",
+    "edgedb": "^1.3.7"
+  },
+  "scripts": {
+    "edgedb:q": "npx @edgedb/generate queries --file ",    
+    "edgedb:mc": "edgedb migration create",
+    "edgedb:m": "edgedb migrate",
+    "edgedb:migrate": "npm run edgedb:mc && npm run edgedb:m && npm run edgedb:q"
+  }
+}

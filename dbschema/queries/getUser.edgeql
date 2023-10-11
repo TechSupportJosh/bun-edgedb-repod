@@ -1,0 +1,4 @@
+select User {
+    id,
+    name
+}
